@@ -20,7 +20,10 @@ class dk_speakout_petition_widget extends WP_Widget {
 		if ( ! is_admin() && is_active_widget( false, false, $this->id_base, true ) ) {
 
 			// load the JavaScript
-			wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( 'speakout/js/widget.js' ), array( 'jquery' ) );
+			// wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( 'speakout/js/widget.js' ), array( 'jquery' ) );
+			wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( 'speakout/js/widget.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-dialog' ) );
+
+			wp_enqueue_style("wp-jquery-ui-dialog");
 
 			// load the CSS theme
 			$options = get_option( 'dk_speakout_options' );

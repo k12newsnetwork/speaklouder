@@ -60,8 +60,8 @@ function dk_speakout_meta_links( $links, $file ) {
 		return array_merge(
 			$links,
 			array(
-				sprintf( '<a href="http://wordpress.org/tags/speakout-email-petitions?forum_id=10">%s</a>', __( 'Support', 'dk_speakout' ) ),
-				sprintf( '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PPYZ8K2KLXUJ">%s</a>', __( 'Donate', 'dk_speakout' ) )
+				// sprintf( '<a href="http://wordpress.org/tags/speakout-email-petitions?forum_id=10">%s</a>', __( 'Support', 'dk_speakout' ) ),
+				// sprintf( '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PPYZ8K2KLXUJ">%s</a>', __( 'Donate', 'dk_speakout' ) )
 			)
 		);
 	}
