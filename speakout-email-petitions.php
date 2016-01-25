@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: SpeakOut! Email Petitions
+Plugin Name: SpeakLouder! Email Petitions
 Plugin URI: http://speakout.123host.com.au/
 Description: Create custom email petition forms and include them on your site via shortcode or widget. Signatures are saved in the database and can be exported to CSV.
-Version: 2.1.3
+Version: 2.2.3
 Author: Steve D forked from SpeakUp!
 Author URI: http://speakout.123host.com.au
 License: GPL2
@@ -51,7 +51,7 @@ else {
 include_once( dirname( __FILE__ ) . '/includes/widget.php' );
 
 // add Support and Donate links to the Plugins page
-add_filter( 'plugin_row_meta', 'dk_speakout_meta_links', 10, 2 );
+// add_filter( 'plugin_row_meta', 'dk_speakout_meta_links', 10, 2 );
 function dk_speakout_meta_links( $links, $file ) {
 	$plugin = plugin_basename( __FILE__ );
 
@@ -60,13 +60,11 @@ function dk_speakout_meta_links( $links, $file ) {
 		return array_merge(
 			$links,
 			array(
-				// sprintf( '<a href="http://wordpress.org/tags/speakout-email-petitions?forum_id=10">%s</a>', __( 'Support', 'dk_speakout' ) ),
-				// sprintf( '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PPYZ8K2KLXUJ">%s</a>', __( 'Donate', 'dk_speakout' ) )
+				sprintf( '<a href="http://wordpress.org/tags/speakout-email-petitions?forum_id=10">%s</a>', __( 'Support', 'dk_speakout' ) ),
+				sprintf( '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PPYZ8K2KLXUJ">%s</a>', __( 'Donate', 'dk_speakout' ) )
 			)
 		);
 	}
 
 	return $links;
 }
-
-?>
