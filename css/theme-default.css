@@ -8,8 +8,8 @@
 .dk-speakout-petition-wrap {
   background-color: #ebebeb;
   border: 1px solid #666666;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+/*   border-radius: 4px; */
+/*   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); */
   font: normal 15px/1.4em Helvetica, Arial, sans-serif !important;
   padding: 0;
   text-shadow: none;
@@ -68,8 +68,8 @@
 /* Petion reader popup */
 #dk-speakout-reader {
   background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+  /* border-radius: 4px; */
+  /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8); */
   font-family: Georgia, sans-serif;
   font-size: 16px;
   height: 1px;
@@ -81,7 +81,7 @@
   font: 16px/1.4em Georgia, sans-serif;
   height: 360px;
   outline: 1px solid #ddd;
-  width: 560px;
+  /* width: 560px; */
 }
 #dk-speakout-reader-content {
   -moz-box-sizing: border-box;

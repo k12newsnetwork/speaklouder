@@ -152,7 +152,7 @@ jQuery( document ).ready( function( $ ) {
 			readerTop    = ( ( windowHeight / 2 ) - ( readerHeight / 2 ) ),
 			readerLeft   = ( ( windowWidth / 2 ) - ( readerWidth / 2 ) ),
 			petitionText = $( 'div#dk-speakout-message-' + id ).html(),
-			reader       = '<div id="dk-speakout-reader"><div id="dk-speakout-reader-close"></div><div id="dk-speakout-reader-content"></div></div>';
+			reader       = '<div id="dk-speakout-reader"><div id="dk-speakout-reader-content"></div></div>'; // <div id="dk-speakout-reader-close"></div>
 
 		// set this to toggle use of .val() / .text() so that Firefox  will read from editable-message textarea as expected
 		$( '#dk-speakout-textval-' + id ).val('text');
@@ -161,6 +161,8 @@ jQuery( document ).ready( function( $ ) {
 		if ( petitionText === undefined ) {
 			petitionText = $( '#dk-speakout-message-editable-' + id ).html();
 		}
+
+		/*
 
 		$( '#dk-speakout-windowshade' ).css( {
 				'width'  : screenWidth,
@@ -171,10 +173,12 @@ jQuery( document ).ready( function( $ ) {
 		if ( $( '#dk-speakout-reader' ).length > 0 ) {
 			$( '#dk-speakout-reader' ).remove();
 		}
+*/
 
 		$( 'body' ).append( reader );
 
-		$('#dk-speakout-reader').css({
+		/*
+$('#dk-speakout-reader').css({
 			position   : 'fixed',
 			left       : sourceLeft,
 			top        : sourceTop,
@@ -189,31 +193,43 @@ jQuery( document ).ready( function( $ ) {
 		}, 500, function() {
 			$( '#dk-speakout-reader-content' ).html( petitionText );
 		});
+*/
+		$( '#dk-speakout-reader-content' ).html( petitionText );
+		$( '#dk-speakout-reader' ).dialog({
+			      show: {
+			        effect: "fade",
+		            duration: 500,
+			        
+			      },
+			      modal: false,
+				  width: 800, // overcomes width:'auto' and maxWidth bug
+			      responsive: true			      
+			    });
 
 		/* Close the pop-up petition reader */
 		// by clicking windowshade area
-		$( '#dk-speakout-windowshade' ).click( function () {
-			$( this ).fadeOut( 'slow' );
-			// write edited text to form - using .text() because target textarea has display: none
-			$( '.dk-speakout-message-' + id ).text( $( '#dk-speakout-reader textarea' ).val() );
-			$( '#dk-speakout-reader' ).remove();
-		});
+		// $( '#dk-speakout-windowshade' ).click( function () {
+		//	$( this ).fadeOut( 'slow' );
+		//	// write edited text to form - using .text() because target textarea has display: none
+		//	$( '.dk-speakout-message-' + id ).text( $( '#dk-speakout-reader textarea' ).val() );
+		//	$( '#dk-speakout-reader' ).remove();
+		// });
 		// or by clicking the close button
-		$( '#dk-speakout-reader-close' ).live( 'click', function() {
-			$( '#dk-speakout-windowshade' ).fadeOut( 'slow' );
-			// write edited text to form - using .text() because target textarea has display: none
-			$( '.dk-speakout-message-' + id ).text( $( '#dk-speakout-reader textarea' ).val() );
-			$( '#dk-speakout-reader' ).remove();
-		});
-		// or by pressing ESC
-		$( document ).keyup( function( e ) {
-			if ( e.keyCode === 27 ) {
-				$( '#dk-speakout-windowshade' ).fadeOut( 'slow' );
-				// write edited text to form - using .text() because target textarea has display: none
-				$( '.dk-speakout-message-' + id ).text( $( '#dk-speakout-reader textarea' ).val() );
-				$( '#dk-speakout-reader' ).remove();
-			}
-		});
+		//$( '#dk-speakout-reader-close' ).live( 'click', function() {
+		//	$( '#dk-speakout-windowshade' ).fadeOut( 'slow' );
+		//	// write edited text to form - using .text() because target textarea has display: none
+		//	$( '.dk-speakout-message-' + id ).text( $( '#dk-speakout-reader textarea' ).val() );
+		//	$( '#dk-speakout-reader' ).remove();
+		//});
+		// // or by pressing ESC
+		//$( document ).keyup( function( e ) {
+		//	if ( e.keyCode === 27 ) {
+		//		$( '#dk-speakout-windowshade' ).fadeOut( 'slow' );
+		//		// write edited text to form - using .text() because target textarea has display: none
+		//		$( '.dk-speakout-message-' + id ).text( $( '#dk-speakout-reader textarea' ).val() );
+		//		$( '#dk-speakout-reader' ).remove();
+		//	}
+		//});
 
 	});
 

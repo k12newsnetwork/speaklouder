@@ -133,7 +133,7 @@
 }
 /*
 ------------------------------------------------------------
-  Pop-up form styles
+	Pop-up form styles
 ------------------------------------------------------------
 */
 /* Window shade */
@@ -204,9 +204,10 @@
   color: #444;
   font: 15px/1.4em Helvetica, Arial, sans-serif !important;
   margin: 0 10px 0 0;
-/*   max-height: 500px; */
+/*   max-height: 300px; */
 /*   min-height: 480px; */
   overflow: auto;
+  
   padding: 0 5px 1em 4px;
 /*   width: 410px; */
 }
@@ -243,11 +244,11 @@ textarea.dk-speakout-widget-message:focus {
 }
 .dk-speakout-widget-popup-wrap .dk-speakout-widget-half input {
 /*   width: 135px; */
-  width: 45.5%
+	width: 45.5%
 }
 .dk-speakout-widget-popup-wrap .dk-speakout-widget-full input {
 /*   width: 279px; */
-  width: 98%;
+	width: 98%;
 }
 .dk-speakout-widget-popup-wrap label {
   color: #808080;
@@ -284,7 +285,7 @@ textarea.dk-speakout-widget-message:focus {
   vertical-align: -1px;
 }
 /*
- *  Submit button
+ *	Submit button
  */
 .dk-speakout-widget-submit-wrap {
   margin-top: .7em;
@@ -306,7 +307,7 @@ textarea.dk-speakout-widget-message:focus {
   line-height: 2em;
   position: relative;
   text-shadow: 0 -1px 0 #a63200;
-  width: 276px;
+  min-width: 276px;
   text-align: center;
 }
 .dk-speakout-widget-submit:active {
@@ -422,11 +423,11 @@ a.dk-speakout-widget-facebook:active {
 }
 /*
 ------------------------------------------------------------
-  Small Screens
+	Small Screens
 ------------------------------------------------------------
 */
 @media only screen and (max-device-width: 480px) {
   .dk-speakout-widget-popup-wrap {
-    position: absolute;
+/*     position: absolute; */
   }
 }

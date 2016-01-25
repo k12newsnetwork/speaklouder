@@ -62,7 +62,7 @@ jQuery( document ).ready( function( $ ) {
 			        
 			      },
 			      modal: false,
-				  width: 600, // overcomes width:'auto' and maxWidth bug
+				  width: 800, // overcomes width:'auto' and maxWidth bug
 			      responsive: true			      
 			    });
 
