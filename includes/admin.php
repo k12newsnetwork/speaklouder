@@ -79,7 +79,7 @@ function dk_speakout_admin_js() {
 	global $parent_file;
 
 	if ( $parent_file == 'dk_speakout' ) {
-		wp_enqueue_script( 'dk_speakout_admin_js', plugins_url( 'speakout/js/admin.js' ), array( 'jquery' ) );
+		wp_enqueue_script( 'dk_speakout_admin_js', plugins_url( '../js/admin.js', __FILE__ ), array( 'jquery' ) );
 		wp_enqueue_script( 'post', admin_url( 'js/post.js' ), 'jquery' );
 	}
 }
@@ -90,7 +90,7 @@ function dk_speakout_admin_css() {
 	global $parent_file;
 
 	if ( $parent_file == 'dk_speakout' ) {
-		wp_enqueue_style( 'dk_speakout_admin_css', plugins_url( 'speakout/css/admin.css' ) );
+		wp_enqueue_style( 'dk_speakout_admin_css', plugins_url( '../css/admin.css', __FILE__ ) );
 	}
 }
 
