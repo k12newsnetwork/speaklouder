@@ -287,7 +287,7 @@ function dk_speakout_public_css_js( $posts ) {
 		// ensure ajax callback url works on both https and http
 		$protocol = isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://';
 		$params   = array( 'ajaxurl' => admin_url( 'admin-ajax.php', $protocol ) );
-		wp_enqueue_script( 'dk_speakout_js', plugins_url( '../js/public.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_script( 'dk_speakout_js', plugins_url( '../js/public.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-dialog' ) );
 		wp_localize_script( 'dk_speakout_js', 'dk_speakout_js', $params );
 	}
 
