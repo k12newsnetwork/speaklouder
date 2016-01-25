@@ -21,7 +21,9 @@ class dk_speakout_petition_widget extends WP_Widget {
 
 			// load the JavaScript
 			// wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( 'speakout/js/widget.js' ), array( 'jquery' ) );
-			wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( '../js/widget.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-dialog' ) );
+			wp_enqueue_script( 'dk_speakout_dialog_js', plugins_url( '../js/jquery.dialogOptions.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-dialog' ) );
+			wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( '../js/widget.js', __FILE__ ), array( 'dk_speakout_dialog_js' ) );
+			
 
 			wp_enqueue_style("wp-jquery-ui-dialog");
 
@@ -172,7 +174,7 @@ class dk_speakout_petition_widget extends WP_Widget {
 				<div id="dk-speakout-widget-windowshade"></div>
 				<div id="dk-speakout-widget-popup-wrap-' . $petition->id . '" class="dk-speakout-widget-popup-wrap">
 					<h3>' . stripslashes( esc_html( $petition->title ) ) . '</h3>
-					<div class="dk-speakout-widget-close"></div>';
+					'; // <div class="dk-speakout-widget-close"></div>
 			if ( $petition->is_editable == 1 ) {
 				$petition_widget .= '
 					<div class="dk-speakout-widget-message-wrap">
