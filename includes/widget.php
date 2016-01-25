@@ -21,7 +21,7 @@ class dk_speakout_petition_widget extends WP_Widget {
 
 			// load the JavaScript
 			// wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( 'speakout/js/widget.js' ), array( 'jquery' ) );
-			wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( 'speakout/js/widget.js' ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-dialog' ) );
+			wp_enqueue_script( 'dk_speakout_widget_js', plugins_url( '../js/widget.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-dialog' ) );
 
 			wp_enqueue_style("wp-jquery-ui-dialog");
 
@@ -31,7 +31,7 @@ class dk_speakout_petition_widget extends WP_Widget {
 
 			 // load default theme
 			if ( $theme === 'default' ) {
-				wp_enqueue_style( 'dk_speakout_widget_css', plugins_url( 'speakout/css/widget.css' ) );
+				wp_enqueue_style( 'dk_speakout_widget_css', plugins_url( '../css/widget.css', __FILE__ ) );
 			}
 			// attempt to load cusom theme (petition-widget.css)
 			else {
