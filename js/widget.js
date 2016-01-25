@@ -6,45 +6,58 @@ jQuery( document ).ready( function( $ ) {
 
 	// run only if widget is on the page
 	if( $( '.dk-speakout-widget-wrap' ).length ) {
+
+		// $( '.dk-speakout-widget-button' ).click( function( e ) {
+		// 	var petition_form = '#' + $( this ).attr( 'rel' ),
+		// 		screenHeight  = $( document ).height(),
+		// 		screenWidth   = $( window ).width(),
+		// 		windowHeight  = $( window ).height(),
+		// 		windowWidth   = $( window ).width();
+
+		// 	$( '#dk-speakout-widget-windowshade' ).css( {
+		// 		'width'  : screenWidth,
+		// 		'height' : screenHeight
+		// 	});
+		// 	$( '#dk-speakout-widget-windowshade' ).fadeTo( 500, 0.8 );
+
+		// 	// center the pop-up window
+		// 	$( petition_form ).css( 'top',  ( ( windowHeight / 2 ) - ( $( petition_form ).height() / 2 ) ) );
+		// 	$( petition_form ).css( 'left', ( windowWidth / 2 ) - ( $( petition_form ).width() / 2 ) );
+
+		// 	// display the form
+		// 	$( petition_form ).fadeIn( 500 );
+		// });
+
 		$( '.dk-speakout-widget-button' ).click( function( e ) {
-			var petition_form = '#' + $( this ).attr( 'rel' ),
-				screenHeight  = $( document ).height(),
-				screenWidth   = $( window ).width(),
-				windowHeight  = $( window ).height(),
-				windowWidth   = $( window ).width();
 
-			$( '#dk-speakout-widget-windowshade' ).css( {
-				'width'  : screenWidth,
-				'height' : screenHeight
-			});
-			$( '#dk-speakout-widget-windowshade' ).fadeTo( 500, 0.8 );
+			var petition_form = '#' + $( this ).attr( 'rel' );
+			$( petition_form ).dialog({
+			      show: {
+			        effect: "fade",
+			        duration: 500
+			      }			      
+			    });
 
-			// center the pop-up window
-			$( petition_form ).css( 'top',  ( ( windowHeight / 2 ) - ( $( petition_form ).height() / 2 ) ) );
-			$( petition_form ).css( 'left', ( windowWidth / 2 ) - ( $( petition_form ).width() / 2 ) );
-
-			// display the form
-			$( petition_form ).fadeIn( 500 );
 		});
 
 		/* Close the pop-up petition form */
 		// by clicking windowshade area
-		$( '#dk-speakout-widget-windowshade' ).click( function () {
-			$( this ).fadeOut( 'slow' );
-			$( '.dk-speakout-widget-popup-wrap' ).hide();
-		});
+		// $( '#dk-speakout-widget-windowshade' ).click( function () {
+		// 	$( this ).fadeOut( 'slow' );
+		// 	$( '.dk-speakout-widget-popup-wrap' ).hide();
+		// });
 		// or by clicking the close button
-		$( '.dk-speakout-widget-close' ).click( function() {
-			$( '#dk-speakout-widget-windowshade' ).fadeOut( 'slow' );
-			$( '.dk-speakout-widget-popup-wrap' ).hide();
-		});
+		// $( '.dk-speakout-widget-close' ).click( function() {
+		// 	$( '#dk-speakout-widget-windowshade' ).fadeOut( 'slow' );
+		// 	$( '.dk-speakout-widget-popup-wrap' ).hide();
+		// });
 		// or by pressing ESC
-		$( document ).keyup( function( e ) {
-			if ( e.keyCode === 27 ) {
-				$( '#dk-speakout-widget-windowshade' ).fadeOut( 'slow' );
-				$( '.dk-speakout-widget-popup-wrap' ).hide();
-			}
-		});
+		// $( document ).keyup( function( e ) {
+		// 	if ( e.keyCode === 27 ) {
+		// 		$( '#dk-speakout-widget-windowshade' ).fadeOut( 'slow' );
+		// 		$( '.dk-speakout-widget-popup-wrap' ).hide();
+		// 	}
+		// });
 
 		// process petition form submissions
 		$( '.dk-speakout-widget-submit' ).click( function( e ) {
