@@ -166,7 +166,7 @@ function dk_speakout_emailpetition_shortcode( $attr ) {
 				$petition_form .= '
 							<div class="dk-speakout-submit-wrap">
 								<div id="dk-speakout-ajaxloader-' . $petition->id . '" class="dk-speakout-ajaxloader" style="visibility: hidden;">&nbsp;</div>
-								<a name="' . $petition->id . '" class="dk-speakout-submit"><span>' . stripslashes( esc_html( $options['button_text'] ) ) . '</span></a>
+								<a name="' . $petition->id . '" class="dk-speakout-submit"><span>' . stripslashes( esc_html( __( $options['button_text'], 'dk_speakout' ) ) ) . '</span></a>
 							</div>
 						</form>';
 				if ( $options['display_count'] == 1 ) {
@@ -180,7 +180,7 @@ function dk_speakout_emailpetition_shortcode( $attr ) {
 				}
 				$petition_form .= '
 						<div class="dk-speakout-share">
-							<div><p>' . stripslashes( esc_html( $options['share_message'] ) ) . '</p>
+							<div><p>' . stripslashes( esc_html( __( $options['share_message'], 'dk_speakout' ) ) ) . '</p>
 							<p>
 								<a class="dk-speakout-facebook" href="#" title="Facebook" rel="' . $petition->id . '"><span>&nbsp;</span></a>
 								<a class="dk-speakout-twitter" href="#" title="Twitter" rel="' . $petition->id . '"><span>&nbsp;</span></a>

@@ -292,11 +292,11 @@ class dk_speakout_petition_widget extends WP_Widget {
 				$petition_widget .= '
 							<div class="dk-speakout-widget-submit-wrap">
 								<div id="dk-speakout-widget-ajaxloader-' . $petition->id . '" class="dk-speakout-widget-ajaxloader" style="visibility: hidden;">&nbsp;</div>
-								<a name="' . $petition->id . '" class="dk-speakout-widget-submit"><span>' . stripslashes( esc_html( $options['button_text'] ) ) . '</span></a>
+								<a name="' . $petition->id . '" class="dk-speakout-widget-submit"><span>' . stripslashes( esc_html( __( $options['button_text'], 'dk_speakout' ) ) ) . '</span></a>
 							</div>
 						</form>
 						<div class="dk-speakout-widget-share">
-							<p><strong>' . stripslashes( esc_html( $options['share_message'] ) ) . '</strong></p>
+							<p><strong>' . stripslashes( esc_html( __( $options['share_message'], 'dk_speakout' ) ) ) . '</strong></p>
 							<p>
 							<a class="dk-speakout-widget-facebook" href="#" title="Facebook"><span></span></a>
 							<a class="dk-speakout-widget-twitter" href="#" title="Twitter"><span></span></a>
