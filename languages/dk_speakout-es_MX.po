@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SpeakUp! Email Petitions\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-20 07:22-0700\n"
-"PO-Revision-Date: 2016-01-27 21:01-0700\n"
+"PO-Revision-Date: 2016-01-27 21:27-0700\n"
 "Last-Translator: Kreg <Wallace>\n"
 "Language-Team: DesignKode <speakup@designkode.com>\n"
 "Language: es_ES\n"
@@ -361,7 +361,7 @@ msgstr "no"
 
 #: includes/emailpetition.php:67
 msgid "Read the petition"
-msgstr "Leer la petición"
+msgstr "Lea la petición"
 
 #: includes/emailpetition.php:83 includes/signatures.view.php:45
 #: includes/signatures.view.php:57 includes/widget.php:221
@@ -735,7 +735,7 @@ msgstr "Mostrar Admin"
 
 #: includes/install.php:64
 msgid "Sign Now"
-msgstr "Firmar"
+msgstr "Firmar ahora"
 
 #: includes/install.php:65
 msgid "This petition is now closed."
@@ -755,7 +755,7 @@ msgstr "Esta petición ya ha sido firmado con su dirección de correo."
 
 #: includes/install.php:68
 msgid "Share this with your friends:"
-msgstr "Comparte esto con tus amigos:"
+msgstr "Comparta con sus amigos:"
 
 #: includes/install.php:69 includes/install.php:189
 msgid "Please confirm your email address"
