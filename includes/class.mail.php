@@ -145,7 +145,7 @@ class dk_speakout_Mail
 	 */
 	private function send( $to, $subject, $message, $headers )
 	{
-		wp_mail( $to, $subject, $message, $headers );
+		wp_mail( $to, $subject, $message ); // , $headers
 	}
 
 }
