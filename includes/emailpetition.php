@@ -173,7 +173,7 @@ function dk_speakout_emailpetition_shortcode( $attr ) {
 					$petition_form .= '
 						<div class="dk-speakout-progress-wrap">
 							<div class="dk-speakout-signature-count">
-								<span>' . number_format( $petition->signatures ) . '</span> ' . _n( 'signature', 'signatures', $petition->signatures, 'dk_speakout' ) . '
+								<span>' . number_format( $petition->signatures ) . '</span> ' . _n( __('signature', 'dk_speakout'), __('signatures', 'dk_speakout'), $petition->signatures, 'dk_speakout' ) . '
 							</div>
 							' . dk_speakout_SpeakOut::progress_bar( $petition->goal, $petition->signatures, $progress_width ) . '
 						</div>';
