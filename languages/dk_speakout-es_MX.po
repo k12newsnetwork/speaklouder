@@ -378,6 +378,12 @@ msgstr "Confirmar Email"
 msgid "signature"
 msgstr "firma"
 
+#: includes/emailpetition.php:148 includes/emailpetition.php:155
+#: includes/emailpetition.php:176 includes/emailpetition.php:205
+#: includes/widget.php:161 includes/widget.php:178 includes/widget.php:187
+msgid "signatures"
+msgstr "firmas"
+
 #: includes/emailpetition.php:195 includes/widget.php:207
 msgid "Signature goal"
 msgstr "Firma del Objetivo"
