@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SpeakUp! Email Petitions\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-20 07:22-0700\n"
-"PO-Revision-Date: 2016-01-27 21:42-0700\n"
+"PO-Revision-Date: 2016-01-27 22:01-0700\n"
 "Last-Translator: Kreg <Wallace>\n"
 "Language-Team: DesignKode <speakup@designkode.com>\n"
 "Language: es_ES\n"
@@ -361,11 +361,11 @@ msgstr "Lea la petición"
 #: includes/emailpetition.php:83 includes/signatures.view.php:45
 #: includes/signatures.view.php:57 includes/widget.php:221
 msgid "Email"
-msgstr "Email"
+msgstr "Correo electrónico"
 
 #: includes/emailpetition.php:89 includes/widget.php:227
 msgid "Confirm Email"
-msgstr "Confirmar Email"
+msgstr "Confirmar correo electrónico﻿"
 
 #: includes/emailpetition.php:148 includes/emailpetition.php:155
 #: includes/emailpetition.php:176 includes/emailpetition.php:205
