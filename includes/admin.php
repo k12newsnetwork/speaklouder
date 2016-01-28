@@ -52,7 +52,7 @@ function dk_speakout_create_menus() {
 }
 
 // display custom menu icon
-add_action( 'admin_head', 'dk_speakout_menu_icon' );
+// add_action( 'admin_head', 'dk_speakout_menu_icon' );
 function dk_speakout_menu_icon() {
 	echo '
 		<style type="text/css">
