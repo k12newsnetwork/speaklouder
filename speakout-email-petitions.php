@@ -3,7 +3,7 @@
 Plugin Name: SpeakLouder! Email Petitions
 Plugin URI: http://speakout.123host.com.au/
 Description: Create custom email petition forms and include them on your site via shortcode or widget. Signatures are saved in the database and can be exported to CSV.
-Version: 2.3.1
+Version: 2.4.2
 Author: Steve D forked from SpeakUp!
 Author URI: http://speakout.123host.com.au
 License: GPL2
@@ -14,7 +14,7 @@ GitHub Plugin URI: https://github.com/k12newsnetwork/speaklouder
 global $wpdb, $db_petitions, $db_signatures, $dk_speakout_version;
 $db_petitions  = $wpdb->prefix . 'dk_speakout_petitions';
 $db_signatures = $wpdb->prefix . 'dk_speakout_signatures';
-$dk_speakout_version = '2.3.1';
+$dk_speakout_version = '2.4.2';
 
 // enable localizations
 add_action( 'init', 'dk_speakout_translate' );
